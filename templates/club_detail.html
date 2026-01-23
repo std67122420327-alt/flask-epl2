@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ club.name }}</title>
+</head>
+<body>
+    <h1>{{ club.name }}</h1>
+    <p>Stadium: {{ club.stadium }}</p>
+    <p>Founded: {{ club.year }}</p>
+    <p>Logo: {{ club.logo }}</p>
+    <h2>Players</h2>
+    <ul>
+        {% for player in players %}
+        <li>{{ player.name }} - {{ player.position }} ({{ player.nationality }})</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Clubs</a>
+</body>
+</html>

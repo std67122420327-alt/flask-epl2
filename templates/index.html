@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPL Clubs</title>
+</head>
+<body>
+    <h1>EPL Clubs</h1>
+    <ul>
+        {% for club in clubs %}
+        <li>
+            <a href="/club/{{ club.id }}">{{ club.name }}</a> - {{ club.stadium }} (Founded: {{ club.year }})
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
